@@ -1,0 +1,37 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+                controller="ActionRequestController">
+    
+    
+    <!-- attributes -->
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="center" type="Object" />
+    <aura:attribute name="zoomLevel" type="Integer" />
+    <aura:attribute name="markersTitle" type="String" />
+    <aura:attribute name="showFooter" type="Boolean" />
+    
+    <!-- handlers-->
+  <!--  <aura:handler name="doInit" value="{! this }" action="{! c.doInit }"/> -->
+    
+    <!-- the map component 
+    <lightning:map
+        mapMarkers="{! v.mapMarkers }"
+        center="{! v.center }"
+        zoomLevel="{! v.zoomLevel }"
+        markersTitle="{! v.markersTitle }"
+        showFooter="{ !v.showFooter }" >
+    </lightning:map> 
+ -->
+    
+    
+    <div style="height: 660px;">
+        <div class="slds-grid slds-has-coordinates">
+            <div class="slds-map_container">
+                <div class="slds-map">
+                    <iframe id="GoogleMapID" title="Google Maps iframe" src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</aura:component>
